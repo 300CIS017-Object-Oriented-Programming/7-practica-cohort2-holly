@@ -5,10 +5,21 @@
 #ifndef CLIENTE_H
 #define CLIENTE_H
 
-
+#include <string>
+#include <vector>
+using namespace std;
 
 class cliente {
+private:
+    int id;
+    string nombre;
+    vector<string> historialCompras;
 
+public:
+    cliente(int id, string nombre);
+    void agregarCompra(string producto);
+    void mostrarHistorialCompras() const;
+    string obtenerNombre() const;
 };
 
 
