@@ -4,6 +4,7 @@
 
 #include "cliente.h"
 #include <iostream>
+#include <string>
 using namespace std;
 
 cliente::cliente(int id, string nombre) : id(id), nombre(nombre) {}
