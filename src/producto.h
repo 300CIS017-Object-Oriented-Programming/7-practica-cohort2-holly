@@ -21,6 +21,8 @@ public:
     void agregarStock(int cantidad);
     int obtenerStock() const;
     string obtenerNombre() const;
+    string getNombre() const { return nombre; }
+    float getPrecio() const { return precio; }
 
 };
 

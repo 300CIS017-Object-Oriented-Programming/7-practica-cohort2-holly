@@ -19,6 +19,7 @@ public:
     void agregarCompra(string producto);
     void mostrarHistorialCompras() const;
     string obtenerNombre() const;
+    string getNombre() const { return nombre; }
 };
 
 

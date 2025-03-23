@@ -29,6 +29,7 @@ public:
     cliente* buscarCliente(int idCliente);
     void listarProductos() const;
     void mostrarVentas() const;
+    void agregarCliente(int id, string nombre);
     float calcularValorInventario() const;
 };
 

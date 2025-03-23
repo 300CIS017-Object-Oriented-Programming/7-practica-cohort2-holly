@@ -58,6 +58,12 @@ void tienda::registrarVenta(int idCliente) {
     ventas.push_back(nuevaVenta);
 }
 
+void tienda::agregarCliente(int id, string nombre) {
+    cliente* nuevoCliente = new cliente(id, nombre);
+    clientes.push_back(nuevoCliente);
+    cout << "Cliente agregado con éxito: " << nombre << endl;
+}
+
 void tienda::reabastecerProducto(string codigoProducto, int cantidad) {
     producto* p = buscarProducto(codigoProducto);
     if (p) {
