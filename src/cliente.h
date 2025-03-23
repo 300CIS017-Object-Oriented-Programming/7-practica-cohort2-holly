@@ -20,6 +20,7 @@ public:
     void mostrarHistorialCompras() const;
     string obtenerNombre() const;
     string getNombre() const { return nombre; }
+    int getId() const { return id; }
 };
 
 

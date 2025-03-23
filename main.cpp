@@ -30,7 +30,7 @@ int main() {
                 string codigo, nombre;
                 float precio;
                 int stock;
-                cout << "Ingrese código del producto: ";
+                cout << "Ingrese codigo del producto: ";
                 cin >> codigo;
                 cout << "Ingrese nombre del producto: ";
                 cin.ignore();
@@ -40,7 +40,7 @@ int main() {
                 cout << "Ingrese cantidad inicial en stock: ";
                 cin >> stock;
                 tienda.agregarProducto(codigo, nombre, precio, stock);
-                cout << "Producto agregado con éxito.\n";
+                cout << "Producto agregado con exito.\n";
                 break;
             }
             case 2:
@@ -70,7 +70,7 @@ int main() {
             case 6: {
                 string codigo;
                 int cantidad;
-                cout << "Ingrese código del producto a reabastecer: ";
+                cout << "Ingrese codigo del producto a reabastecer: ";
                 cin >> codigo;
                 cout << "Ingrese cantidad a añadir: ";
                 cin >> cantidad;
@@ -84,7 +84,7 @@ int main() {
                 cout << "Saliendo del sistema...\n";
                 break;
             default:
-                cout << "Opción no válida, intente nuevamente.\n";
+                cout << "Opcion no valida, intente nuevamente.\n";
         }
     } while (opcion != 8);
 

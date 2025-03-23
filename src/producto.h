@@ -23,6 +23,7 @@ public:
     string obtenerNombre() const;
     string getNombre() const { return nombre; }
     float getPrecio() const { return precio; }
+    string getCodigo() const { return codigo; }
 
 };
 

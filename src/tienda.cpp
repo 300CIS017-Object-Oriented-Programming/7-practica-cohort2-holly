@@ -20,17 +20,19 @@ void tienda::agregarProducto(string codigo, string nombre, float precio, int sto
 
 producto* tienda::buscarProducto(string codigo) {
     for (auto p : productos) {
-        if (p->obtenerNombre() == codigo) return p;
+        if (p->getCodigo() == codigo) return p;
     }
     return nullptr;
 }
 
+
 cliente* tienda::buscarCliente(int idCliente) {
     for (auto c : clientes) {
-        if (c->obtenerNombre() == to_string(idCliente)) return c;
+        if (c->getId() == idCliente) return c;
     }
     return nullptr;
 }
+
 
 void tienda::registrarVenta(int idCliente) {
     cliente* c = buscarCliente(idCliente);
@@ -57,7 +59,6 @@ void tienda::registrarVenta(int idCliente) {
     }
     ventas.push_back(nuevaVenta);
 }
-
 void tienda::agregarCliente(int id, string nombre) {
     cliente* nuevoCliente = new cliente(id, nombre);
     clientes.push_back(nuevoCliente);
@@ -90,7 +91,7 @@ void tienda::mostrarVentas() const {
 float tienda::calcularValorInventario() const {
     float total = 0;
     for (const auto& p : productos) {
-        total += p->obtenerStock() * 10;
+        total += p->obtenerStock() * p->getPrecio();
     }
     return total;
 }
